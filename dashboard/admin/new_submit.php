@@ -185,7 +185,7 @@ echo $invoice;
 			<address>
 				<p>Platea21's Gym</p>
 				<p>3rd flr. JTL bldg. B. S. Tacna, Peru</p>
-				<p>Celular:+51995530374</p><p>www.platea21.com (gorchor@gmail.com)</p><br><p><div id="barcodeTarget" class="barcodeTarget"></div>
+				<p>Celular:+51 995-530-374</p><p>www.platea21.com (gorchor@gmail.com)</p><br><p><div id="barcodeTarget" class="barcodeTarget"></div>
     <canvas id="canvasTarget"></canvas> </span>
 			</address>
 			<span><img alt="" src="../../img/logo.png">

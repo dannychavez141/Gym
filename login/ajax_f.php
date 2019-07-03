@@ -8,7 +8,7 @@
     <meta name="description" content="Neon Admin Panel" />
     <meta name="author" content="Laborator.co" />
     
-    <title>Platea21's Gym | Login</title>
+    <title>Gym | Login</title>
 
     <link rel="stylesheet" href="../neon/js/jquery-ui/css/no-theme/jquery-ui-1.10.3.custom.min.css"  id="style-resource-1">
     <link rel="stylesheet" href="../neon/css/font-icons/entypo/css/entypo.css"  id="style-resource-2">

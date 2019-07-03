@@ -1,1 +1,1 @@
-<footer class="main"> &copy; 2016 <strong>Platea21's Gym </strong></footer>
+<footer class="main"> &copy; 2019 <strong>Gym </strong></footer>
