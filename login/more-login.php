@@ -1,30 +1,12 @@
 <div class="login-container">
 	
-	<div class="login-header login-caret">
-		
-		<div class="login-content">
-			
-			<a href="#" class="logo">
-				<img src="../img/logo.png" alt="" />
-			</a>
-			
-			<p class="description">Estimado usuario, inicie sesion para acceder al área administrativa!</p>
-			
-			<!-- progress bar indicator -->
-			<div class="login-progressbar-indicator">
-				<h3>43%</h3>
-				<span>Iniciando Sesión...</span>
-			</div>
-		</div>
-		
-	</div>
-	
-	<div class="login-progressbar">
-		<div></div>
-	</div>
-	
 	<div class="login-form">
-		
+		<center>
+		<a href="#" class="logo">
+				<img src="../img/logo.png" alt="" width="200" height="100"/>
+			</a>
+		<p class="description">Estimado usuario, inicie sesion para acceder al área administrativa!</p>
+</center>
 		<div class="login-content">
 			
 			<form action="secure_login.php" method='post' id="bb">				
