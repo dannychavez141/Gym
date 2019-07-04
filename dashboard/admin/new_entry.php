@@ -201,7 +201,7 @@ page_protect();
 			</div>
 
 			<div class="form-group">
-				<label for="field-1" class="col-sm-3 control-label">PhoA :</label>					
+				<label for="field-1" class="col-sm-3 control-label">Fotografia:</label>					
 					<div class="col-sm-5">
 						<script language="JavaScript">
 								document.write( webcam.get_html(300, 220) );
@@ -219,31 +219,24 @@ page_protect();
 
 						
 						</script>		
-						<input type=button  class="btn btn-primary" value="Take Snapshot" onClick="take_snapshot()">
+						<input type=button  class="btn btn-primary" value="Tomar Foto" onClick="take_snapshot()">
 					</div>
 			</div>
 
 			<div class="form-group">
 				<label for="field-1" class="col-sm-3 control-label">Nombre :</label>					
 					<div class="col-sm-5">
-						<input type="text" name="p_name" id="textfield3" class="form-control" data-rule-required="true" data-rule-minlength="4" placeholder="Member Name" maxlength="30">
+						<input type="text" name="p_name" id="textfield3" class="form-control" data-rule-required="true" data-rule-minlength="4" placeholder="Nombre de miembro" maxlength="30">
 					</div>
 			</div>
 
 			<div class="form-group">
 				<label for="field-1" class="col-sm-3 control-label">Direccion :</label>					
 					<div class="col-sm-5">
-						<input type="text" name="add" id="textfield5" class="form-control" data-rule-required="true" data-rule-minlength="6" placeholder="Address">
+						<input type="text" name="add" id="textfield5" class="form-control" data-rule-required="true" data-rule-minlength="6" placeholder="Direccion">
 					</div>
 			</div>
-
-			<div class="form-group">
-				<label for="field-1" class="col-sm-3 control-label">Codigo Postal :</label>					
-					<div class="col-sm-5">
-						<input type="text" name="zipcode" id="zipcode" class="form-control" data-rule-required="true" data-rule-minlength="20" placeholder="Zipcode">
-					</div>
-			</div>							
-
+										
 			<div class="form-group">
 				<label for="field-1" class="col-sm-3 control-label">Fecha de Nacimiento :</label>			
 					<div class="col-sm-5">
