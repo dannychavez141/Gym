@@ -1,1 +1,1 @@
-<footer class="main"> &copy; 2019 <strong>Gym </strong></footer>
+<footer class="main"> &copy; 2019 <strong>RAPAZZ Gym </strong></footer>

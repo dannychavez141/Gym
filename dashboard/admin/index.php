@@ -7,15 +7,9 @@ page_protect();
 <head> 
 
     
-    <title>Gym | Dashboard </title>
-
-    <link rel="stylesheet" href="../../neon/js/jquery-ui/css/no-theme/jquery-ui-1.10.3.custom.min.css"  id="style-resource-1">
-    <link rel="stylesheet" href="../../neon/css/font-icons/entypo/css/entypo.css"  id="style-resource-2">
-    <link rel="stylesheet" href="../../neon/css/font-icons/entypo/css/animation.css"  id="style-resource-3">
-    <link rel="stylesheet" href="../../neon/css/neon.css"  id="style-resource-5">
-    <link rel="stylesheet" href="../../neon/css/custom.css"  id="style-resource-6">
-
-    <script src="../../neon/js/jquery-1.10.2.min.js"></script>
+     <?php 
+ include_once'../cabezera.php';  
+?>
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -88,7 +82,7 @@ page_protect();
 					
 				</div>
 
-			<h2>Platea21's Gym</h2>
+			<h2>RAPAZZ Gym</h2>
 
 			<hr>
 
@@ -97,7 +91,7 @@ page_protect();
 					<div class="icon"><i class="entypo-users"></i></div>
 						<div class="num" data-postfix="" data-duration="1500" data-delay="0">
 						<h2>Ingresos Pagados x Mes</h2><br>	
-						$ 
+						S/ 
 						<?php
 							$date  = date('Y-m');
 							$query = "select * from subsciption WHERE  paid_date LIKE '$date%'";
@@ -168,7 +162,7 @@ page_protect();
 					<div class="icon"><i class="entypo-rss"></i></div>
 						<div class="num" data-postfix="" data-duration="1500" data-delay="0">
 						<h2>Ingresos este Mes</h2><br>	
-							$ <?php
+							S/ <?php
 							$date  = date('Y-m');
 							$query = "select * from subsciption WHERE  paid_date LIKE '$date%'";
 

@@ -3,7 +3,7 @@
 	<div class="login-form">
 		<center>
 		<a href="#" class="logo">
-				<img src="../img/logo.png" alt="" width="200" height="100"/>
+				<img src="../img/logo.png" alt="" width="350" height="100"/>
 			</a>
 		<p class="description">Estimado usuario, inicie sesion para acceder al área administrativa!</p>
 </center>

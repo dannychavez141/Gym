@@ -10,7 +10,7 @@ if (isset($_POST['from'])) {
 <html lang="en">
 <head>
 
-    <title>Gym</title>
+    <title>RAPAZZ Gym</title>
     <link rel="stylesheet" href="../../neon/js/jquery-ui/css/no-theme/jquery-ui-1.10.3.custom.min.css"  id="style-resource-1">
     <link rel="stylesheet" href="../../neon/css/font-icons/entypo/css/entypo.css"  id="style-resource-2">
     <link rel="stylesheet" href="../../neon/css/font-icons/entypo/css/animation.css"  id="style-resource-3">
