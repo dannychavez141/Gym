@@ -89,7 +89,7 @@ if (isset($_POST['name'])) {
 				<!-- logo -->
 				<div class="logo">
 					<a href="main.php">
-						<img src="images/logo.png" alt="" width="192" height="80" />
+						<img src="../../img/logo.png" alt="" width="192" height="80" />
 					</a>
 				</div>
 				

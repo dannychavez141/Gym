@@ -90,7 +90,7 @@ if (isset($_POST['name'])) {
 				<!-- logo -->
 				<div class="logo">
 					<a href="main.php">
-						<img src="images/logo.png" alt="" width="192" height="80" />
+						<img src="../../img/logo.png" alt="" width="192" height="80" />
 					</a>
 				</div>
 				
@@ -159,20 +159,14 @@ if (isset($_POST['name'])) {
 				            $name    = $row['name'];
 				            $email   = $row['email'];
 				            $address   	 = $row['address'];
-				            $zipcode = $row['zipcode'];
 				            $birthdate	 = $row['birthdate'];
-				            $age     = $row['age'];
 				            $date    = $row['joining'];
 				            $address = $row['address'];
-				            $contact = $row['contact'];
 				            $height  = $row['height'];
 				            $weight  = $row['weight'];
-				            $nationality  = $row['nationality'];
-				            $facebookaccount  = $row['facebookaccount'];
-				            $twitteraccount  = $row['twitteraccount'];
+				             $nproof  = $row['nproof'];
 				            $contactperson  = $row['contactperson'];
-				            $previousgym  = $row['previousgym'];
-				            $yearstraining  = $row['yearstraining'];
+				       
 
 				        }
 				    }
@@ -188,7 +182,7 @@ if (isset($_POST['name'])) {
 				</div>
 
 				<div class="form-group">
-					<label for="field-1" class="col-sm-3 control-label">PhoA :</label>					
+					<label for="field-1" class="col-sm-3 control-label">Fotografia :</label>					
 						<div class="col-sm-5">
 							<img src='<?php echo $pic_src; ?>'>
 						</div>
@@ -208,26 +202,15 @@ if (isset($_POST['name'])) {
 						</div>
 				</div>
 
-				<div class="form-group">
-					<label for="field-1" class="col-sm-3 control-label">Codigo Postal :</label>					
-						<div class="col-sm-5">
-							<input type="text" name="zipcode" id="zipcode" class="form-control" data-rule-required="true" data-rule-minlength="4" value ='<?php echo $zipcode; ?>' placeholder="Zip Code" maxlength="30">
-						</div>
-				</div>
 
 				<div class="form-group">
-					<label for="field-1" class="col-sm-3 control-label">Birth Fecha :</label>					
+					<label for="field-1" class="col-sm-3 control-label"> Fecha de Nacimiento :</label>					
 						<div class="col-sm-5">
 							<input type="text" name="birthdate" id="birthdate" class="form-control datepicker" value ='<?php echo $birthdate; ?>' data-format="yyyy-m-d">
 						</div>
 				</div>
 
-				<div class="form-group">
-					<label for="field-1" class="col-sm-3 control-label">Edad :</label>					
-						<div class="col-sm-5">
-							<input type="text" name="age" id="textfield4" class="form-control" data-rule-required="true" data-rule-minlength="1" placeholder="Age" value ='<?php echo $age; ?>'  onKeyPress="return checkIt(event)" maxlength="3">
-						</div>
-				</div>					
+							
 
 				<div class="form-group">
 					<label for="field-1" class="col-sm-3 control-label">Sexo :</label>					
@@ -255,39 +238,13 @@ if (isset($_POST['name'])) {
 				</div>
 
 				<div class="form-group">
-					<label for="field-1" class="col-sm-3 control-label">Nacionalidad :</label>					
-						<div class="col-sm-5">
-							<input type="text" name="nationality" id="nationality" class="form-control" data-rule-required="true" data-rule-minlength="6" value ='<?php echo $nationality; ?>'  placeholder="Nationality">
-						</div>
-				</div>
-
-				<div class="form-group">
-					<label for="field-1" class="col-sm-3 control-label">Contacto :</label>					
-						<div class="col-sm-5">
-							<input type="text" name="contact" id="textfield6" class="form-control" data-rule-required="true" data-rule-minlength="10" placeholder="Mobile / Phone" value ='<?php echo $contact; ?>'  onKeyPress="return checkIt(event)" maxlength="10">
-						</div>
-				</div>										
-
-				<div class="form-group">
 					<label for="field-1" class="col-sm-3 control-label">E-Mail :</label>					
 						<div class="col-sm-5">
 							<input type="text" name="email"  id="emailfield" class="form-control" value ='<?php echo $email; ?>'  data-rule-minlength="5" placeholder="E-Mail" maxlength="60">
 						</div>
 				</div>
 
-				<div class="form-group">
-					<label for="field-1" class="col-sm-3 control-label">Facebook Account :</label>					
-						<div class="col-sm-5">
-							<input type="text" name="facebookaccount" id="facebookaccount" class="form-control" data-rule-required="true" data-rule-minlength="6" value ='<?php echo $facebookaccount; ?>'  placeholder="Facebook Account">
-						</div>
-				</div>						
-
-				<div class="form-group">
-					<label for="field-1" class="col-sm-3 control-label">Twitter Account :</label>					
-						<div class="col-sm-5">
-							<input type="text" name="twitteraccount" id="twitteraccount" class="form-control" data-rule-required="true" data-rule-minlength="6" value ='<?php echo $twitteraccount; ?>'  placeholder="Twitter Account">
-						</div>
-				</div>						
+									
 
 
 				<div class="form-group">
@@ -297,19 +254,6 @@ if (isset($_POST['name'])) {
 						</div>
 				</div>	
 
-				<div class="form-group">
-					<label for="field-1" class="col-sm-3 control-label">Previous Gym :</label>					
-						<div class="col-sm-5">
-							<input type="text" name="previousgym" id="previousgym" class="form-control" data-rule-required="true" data-rule-minlength="6" value ='<?php echo $previousgym; ?>'  placeholder="Previous Gym">
-						</div>
-				</div>					
-
-				<div class="form-group">
-					<label for="field-1" class="col-sm-3 control-label">Años Entrenando:</label>					
-						<div class="col-sm-5">
-							<input type="text" name="yearstraining" id="yearstraining" class="form-control" data-rule-required="true" data-rule-minlength="6" value ='<?php echo $yearstraining; ?>'  placeholder="Years Training">
-						</div>
-				</div>	
 
 				<div class="form-group">
 					<label for="field-1" class="col-sm-3 control-label">Identificacion:</label>					
@@ -324,6 +268,12 @@ if (isset($_POST['name'])) {
 								<option value="Others">Otros</option>
 						</select>
 						
+						</div>
+				</div>	
+				<div class="form-group">
+					<label for="field-1" class="col-sm-3 control-label">N° de identificacion:</label>					
+						<div class="col-sm-5">
+							<input type="text" name="nproof" id="textfield6" class="form-control" data-rule-required="true" data-rule-minlength="10" placeholder="N° de identificacion" value ='<?php echo $nproof; ?>'  onKeyPress="return checkIt(event)" maxlength="10">
 						</div>
 				</div>				
 

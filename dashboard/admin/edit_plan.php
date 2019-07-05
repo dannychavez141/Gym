@@ -88,7 +88,7 @@ if (isset($_POST['name'])) {
 				<!-- logo -->
 				<div class="logo">
 					<a href="main.php">
-						<img src="images/logo.png" alt="" width="192" height="80" />
+						<img src="../../img/logo.png" alt="" width="192" height="80" />
 					</a>
 				</div>
 				
@@ -171,7 +171,7 @@ if (isset($_POST['name'])) {
 				<div class="form-group">
 					<label for="field-1" class="col-sm-3 control-label">Nombre :</label>					
 						<div class="col-sm-5">
-							<input type="text" name="name" id="textfield3" class="form-control" data-rule-required="true" data-rule-minlength="4" value ='<?php echo $name; ?>' placeholder="Nombre del Plan" maxlength="100">
+							<input type="text" name="name" id="textfield3" class="form-control" data-rule-required="true" data-rule-minlength="4" value ='<?php echo $name; ?>' placeholder="Nombre del Plan" maxlength="100" readonly>
 						</div>
 				</div>
 

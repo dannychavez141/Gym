@@ -8,7 +8,7 @@ page_protect();
 <html lang="en">
 <head>
 
-    <title>Gym</title>
+    <title>RAPAZZ Gym</title>
     <link rel="stylesheet" href="../../neon/js/jquery-ui/css/no-theme/jquery-ui-1.10.3.custom.min.css"  id="style-resource-1">
     <link rel="stylesheet" href="../../neon/css/font-icons/entypo/css/entypo.css"  id="style-resource-2">
     <link rel="stylesheet" href="../../neon/css/font-icons/entypo/css/animation.css"  id="style-resource-3">
@@ -159,7 +159,7 @@ page_protect();
 					
 				</div>
 
-				<h3>Platea21's Gym</h3>
+				<h3>RAPAZZ Gym</h3>
 
 				<table class="table table-bordered datatable" id="table-1">
 					<thead>
@@ -167,12 +167,12 @@ page_protect();
 							<th>S.No</th><th>ID</th>
 							<th>Nombre</th>
 							<th>Fecha</th>
-							<th>Body Fat</th>
-							<th>Water</th>
-							<th>Muscle</th>
-							<th>Calorie</th>
-							<th>Bone</th>
-							<th>Remarks</th>
+							<th>Grasa Corporal</th>
+							<th>Liquidos</th>
+							<th>Musculatura</th>
+							<th>Calorias</th>
+							<th>Contextura</th>
+							<th>Observaciones</th>
 							<th></th>
 						</tr>
 					</thead>

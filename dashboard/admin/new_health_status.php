@@ -146,10 +146,9 @@ page_protect();
 		<form action="submit_health_new.php" enctype="multipart/form-data" method="POST" role="form" class="form-horizontal form-groups-bordered">
 
 			<div class="form-group">
-			
-				<label class="col-sm-3 control-label">Id</label>
+				<label class="col-sm-3 control-label">Cliente</label>
 					
-					<div class="col-sm-5">	
+					<div class="col-sm-5">						
 							<select name="id" id="id" class="select2" >
 								<option value="">-- Porfavor seleccione --</option>						
 									
@@ -160,33 +159,7 @@ page_protect();
 
 													if (mysqli_affected_rows($con) != 0) {
 													    while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
-															echo "<option value=" . $row['id'] . ">" . $row['id'] . "</option>";
-													    }
-													}
-												?>								
-
-								
-							</select>			
-					
-					</div>
-			</div>			
-
-
-			<div class="form-group">
-				<label class="col-sm-3 control-label">Nombre</label>
-					
-					<div class="col-sm-5">						
-							<select name="name" id="name" class="select2" >
-								<option value="">-- Porfavor seleccione --</option>						
-									
-												<?php
-													$query  = "select * from user_data";
-													//echo $query;
-													$result = mysqli_query($con, $query);
-
-													if (mysqli_affected_rows($con) != 0) {
-													    while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
-															echo "<option value=" . $row['id'] . ">" . $row['name'] . "</option>";
+															echo "<option>'". $row['id'] ."','". $row['name'] . "'</option>";
 													    }
 													}
 												?>								
@@ -201,51 +174,51 @@ page_protect();
 
 
 			<div class="form-group">
-				<label for="field-1" class="col-sm-3 control-label">Date:</label>					
+				<label for="field-1" class="col-sm-3 control-label">Fecha:</label>					
 					<div class="col-sm-5">
 						<input type="text" name="date1" id="date1" class="form-control datepicker" value="<?php echo date('Y-m-d'); ?>">
 					</div>
 			</div>
 
 			<div class="form-group">
-				<label for="field-1" class="col-sm-3 control-label">Body Fat:</label>					
+				<label for="field-1" class="col-sm-3 control-label">Grasa corporal:</label>					
 					<div class="col-sm-5">
-						<input type="text" name="bodyfat" id="bodyfat" class="form-control" placeholder="Body Fat" >
+						<input type="text" name="bodyfat" id="bodyfat" class="form-control" placeholder="Grasa corporal" >
 					</div>
 			</div>			
 
 			<div class="form-group">
-				<label for="field-1" class="col-sm-3 control-label">Water:</label>					
+				<label for="field-1" class="col-sm-3 control-label">Liquidos:</label>					
 					<div class="col-sm-5">
-						<input type="text" name="water" id="water" class="form-control" placeholder="Water" >
+						<input type="text" name="water" id="water" class="form-control" placeholder="Liquidos" >
 					</div>
 			</div>
 
 			<div class="form-group">
-				<label for="field-1" class="col-sm-3 control-label">Muscle:</label>					
+				<label for="field-1" class="col-sm-3 control-label">Músculos:</label>					
 					<div class="col-sm-5">
-						<input type="text" name="muscle" id="muscle" class="form-control" placeholder="Muscle" >
+						<input type="text" name="muscle" id="muscle" class="form-control" placeholder="Músculos" >
 					</div>
 			</div>
 
 			<div class="form-group">
-				<label for="field-1" class="col-sm-3 control-label">Calorie:</label>					
+				<label for="field-1" class="col-sm-3 control-label">Calorias:</label>					
 					<div class="col-sm-5">
-						<input type="text" name="calorie" id="calorie" class="form-control" placeholder="Calorie" >
+						<input type="text" name="calorie" id="calorie" class="form-control" placeholder="Calorias" >
 					</div>
 			</div>
 
 			<div class="form-group">
-				<label for="field-1" class="col-sm-3 control-label">Bone:</label>					
+				<label for="field-1" class="col-sm-3 control-label">Contextura:</label>					
 					<div class="col-sm-5">
-						<input type="text" name="bone" id="bone" class="form-control" placeholder="Bone" >
+						<input type="text" name="bone" id="bone" class="form-control" placeholder="Contextura" >
 					</div>
 			</div>
 
 			<div class="form-group">
-				<label for="field-1" class="col-sm-3 control-label">Remarks:</label>					
+				<label for="field-1" class="col-sm-3 control-label">Observaciones:</label>					
 					<div class="col-sm-5">
-						<input type="text" name="remarks" id="remarks" class="form-control" placeholder="Remarks" >
+						<input type="text" name="remarks" id="remarks" class="form-control" placeholder="Observaciones" >
 					</div>
 			</div>										
 

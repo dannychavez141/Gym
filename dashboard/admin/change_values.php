@@ -153,8 +153,8 @@ page_protect();
 					<th>ID Membresia</th>
 					<th>Nombre del Plan</th>
 					<th>Detalles</th>
-					<th>Days</th>
-					<th>Rate</th>
+					<th>Dias</th>
+					<th>Precio</th>
 					<th></th>
 				</tr>
 			</thead>		
@@ -181,7 +181,7 @@ page_protect();
 					        
 					        $sno++;
 					        
-					        echo "<td><form action='edit_plan.php' method='post'><input type='hidden' name='name' value='" . $msgid . "'/><input type='submit' value='Edit Plan ' class='btn btn-info'/></form><form action='del_plan.php' method='post' onSubmit='return ConfirmDelete();'><input type='hidden' name='name' value='" . $msgid . "'/><input type='submit' value='Delete Plan' class='btn btn-danger'/></form></td></tr>";
+					        echo "<td><form action='edit_plan.php' method='post'><input type='hidden' name='name' value='" . $msgid . "'/><input type='submit' value='Editar Plan ' class='btn btn-info'/></form><form action='del_plan.php' method='post' onSubmit='return ConfirmDelete();'><input type='hidden' name='name' value='" . $msgid . "'/><input type='submit' value='Eliminar Plan' class='btn btn-danger'/></form></td></tr>";
 					        $msgid = 0;
 					    }
 					    

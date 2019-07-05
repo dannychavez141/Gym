@@ -15,7 +15,14 @@
 		</ul>
 	</li>
 
-	<li><a href="new_health_status.php"><i class="entypo-user-add"></i><span>Estado de Salud</span></a> 	
+<li><a href="#"><i class="entypo-user-add"></i><span>Estado de Salud</span></a>
+
+		<ul>
+			<li class="active">
+				<a href="new_health_status.php"><span>Nuevo Estado de Salud</span></a></li>
+
+			<li><a href="view_health.php"><span>Ver Estados de Salud</span></a></li>
+		</ul>
 
 		<li><a href="#"><i class="entypo-quote"></i><span>Plan</span></a>
 

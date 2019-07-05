@@ -7,7 +7,7 @@ page_protect();
 <html lang="en">
 <head>
 
-    <title>Gym</title>
+    <title>RAPAZZ Gym</title>
     <link rel="stylesheet" href="../../neon/js/jquery-ui/css/no-theme/jquery-ui-1.10.3.custom.min.css"  id="style-resource-1">
     <link rel="stylesheet" href="../../neon/css/font-icons/entypo/css/entypo.css"  id="style-resource-2">
     <link rel="stylesheet" href="../../neon/css/font-icons/entypo/css/animation.css"  id="style-resource-3">
@@ -158,7 +158,7 @@ page_protect();
 					
 				</div>
 
-		<h3>Platea21's Gym</h3>
+		<h3>RAPAZZ Gym</h3>
 
 		<hr />
 		
@@ -168,10 +168,10 @@ page_protect();
 					<th>Expiracion Membresia</th>
 					<th>Nombre / ID Miembro</th>
 					<th>Direccion / Contacto</th>
-					<th>Prueba</th>
-					<th>Correo Electronico/ Edad / Sexo</th>
+					<th>Identificacion/N° de identificacion</th>
+					<th>Correo Electronico/ Sexo</th>
 					<th>Altura / Peso</th>
-					<th>Altura / Peso</th>
+					<th>feha / tipo de membrecia</th>
 					<th>Accion</th>
 				</tr>
 			</thead>
@@ -196,16 +196,16 @@ page_protect();
 							                $expiry        = $row1['expiry'];
 							                $sub_type_name = $row1['sub_type_name'];
 							                
-							                echo "<td>" . $row['name'] . " / " . $row['newid'] . "<img src='" . $row['pic_add'] . "'></td>";
-							                echo "<td>" . $row['address'] . " / " . $row['contact'] . "</td>";
-							                echo "<td>" . $row['proof'] . " / " . $row['other_proof'] . "</td>";
-							                echo "<td>" . $row['email'] . " / " . $row['age'] . " / " . $row['sex'] . "</td>";
+							                echo "<td>" . $row['name'] . " / " . $row['newid'] . "<img src='" . $row['pic_add'] . "'width='100' height='100'></td>";
+							                echo "<td>" . $row['address'] . " / " . $row['contactperson'] . "</td>";
+							                echo "<td>" . $row['proof'] . " / " . $row['nproof'] . "</td>";
+							                echo "<td>" . $row['email'] . " / "  . $row['sex'] . "</td>";
 							                echo "<td>" . $row['height'] . " / " . $row['weight'] . "</td>";
 							                echo "<td>" . $row['joining'] . " / " . $row1['sub_type_name'] . "</td>";
 							                
 							                $sno++;
 							                
-							                echo "<td><form action='read_member.php' method='post'><input type='hidden' name='name' value='" . $msgid . "'/><input type='submit' value='View History ' class='btn btn-info'/></form><form action='edit_member.php' method='post'><input type='hidden' name='name' value='" . $msgid . "'/><input type='submit' value='Edit' class='btn btn-warning'/></form><form action='del_member.php' method='post' onSubmit='return ConfirmDelete();'><input type='hidden' name='name' value='" . $msgid . "'/><input type='submit' value='Delete ' class='btn btn-danger'/></form></td></tr>";
+							                echo "<td><form action='read_member.php' method='post'><input type='hidden' name='name' value='" . $msgid . "'/><input type='submit' value='Ver Historial' class='btn btn-info'/></form><form action='edit_member.php' method='post'><input type='hidden' name='name' value='" . $msgid . "'/><input type='submit' value='Editar' class='btn btn-warning'/></form><form action='del_member.php' method='post' onSubmit='return ConfirmDelete();'><input type='hidden' name='name' value='" . $msgid . "'/><input type='submit' value='Eliminar' class='btn btn-danger'/></form></td></tr>";
 							                $msgid = 0;
 							            }
 							        }

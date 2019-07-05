@@ -152,12 +152,12 @@ echo $invoice;
 		<header>
 			<a href="payments.php"><h1>Invoice (Payments)</h1></a>
       <address>
-        <p>Platea21's Gym</p>
-        <p>3rd flr. JTL bldg. B. S. Tacna, Peru</p>
-        <p>Celular:+51995530374</p><p>www.platea21.com (gorchor@gmail.com)</p><br><p><div id="barcodeTarget" class="barcodeTarget"></div>
+        <p>RAPAZZ Gym</p>
+        <p>Psje. San Francisco Mz. 183 Lte. 21 Yarinacocha, Peru</p>
+        <p>Celular:+51995530374</p><br><p><div id="barcodeTarget" class="barcodeTarget"></div>
     <canvas id="canvasTarget"></canvas> </span>
       </address>
-			<span><img alt="" src="../../img/logo.png">
+      <span><img alt="" src="../../img/logo.png" width="350" height="100">
 		</header>
 		<article><img alt="" src="pic1.jpg" width="100" height="100">
 			<table class="meta">
@@ -252,6 +252,6 @@ echo $total - $paid;
       <div  >
         <p>1). Todos los miembros deben respetar nuestros TNC / normas normalmente de miembros podrán retirarse. </br> </br> 2). El pago no es transferible y no es reembolsable. </br> </br> 3). Comision en caso de presentarse dentro de los 5 días hábiles antes de la expiración sometidos , de lo contrario 100 PHP / día se le cobrará . </br> </br> 4). Todos los usuarios deben vestir apropiadamente O según aconseja. </br> </br> 5). Fumar NO está permitido en el sitio de la gimnasia . </br> </br> 6). Un PHP 1000 para romper / scracthing gafas que pertenecen a " gimnasio de Platea21 " se impondrá .
       </div>
-    </aside><center><br><br><a href="view_mem.php">Platea21's Gym ( www.platea21.com )</center>
+    </aside><center><br><br><a href="view_mem.php">RAPAZZ Gym </center>
   </body>
 </html>

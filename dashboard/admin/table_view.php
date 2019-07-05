@@ -8,7 +8,7 @@ page_protect();
 <html lang="en">
 <head>
 
-    <title>Gym</title>
+    <title>RAPAZZ Gym</title>
     <link rel="stylesheet" href="../../neon/js/jquery-ui/css/no-theme/jquery-ui-1.10.3.custom.min.css"  id="style-resource-1">
     <link rel="stylesheet" href="../../neon/css/font-icons/entypo/css/entypo.css"  id="style-resource-2">
     <link rel="stylesheet" href="../../neon/css/font-icons/entypo/css/animation.css"  id="style-resource-3">
@@ -170,7 +170,7 @@ page_protect();
 					<th>Nombre / ID Miembro</th>
 					<th>Direccion / Contacto</th>
 					<th>Prueba</th>
-					<th>Correo Electronico/ Edad / Sexo</th>
+					<th>Correo Electronico/ Sexo</th>
 					<th>Altura / Peso</th>
 					<th>Fecha Inscripcion / Tipo de Miembro </th>
 					<th>Accion</th>
@@ -197,16 +197,16 @@ page_protect();
 						                $expiry        = $row1['expiry'];
 						                $sub_type_name = $row1['sub_type_name'];
 						                $msgid1        = $row['name'];
-						                echo "<td>" . $row['name'] . " / " . $row['newid'] . "<img src='" . $row['pic_add'] . "'></td>";
-						                echo "<td>" . $row['address'] . " / " . $row['contact'] . "</td>";
+						                echo "<td>" . $row['name'] . " / " . $row['newid'] . "<img src='" . $row['pic_add'] . "' width='100' height='100'></td>";
+						                echo "<td>" . $row['address'] . " / " . $row['contactperson'] . "</td>";
 						                echo "<td>" . $row['proof'] . " / " . $row['other_proof'] . "</td>";
-						                echo "<td>" . $row['email'] . " / " . $row['age'] . " / " . $row['sex'] . "</td>";
+						                echo "<td>" . $row['email'] . " / " . $row['sex'] . "</td>";
 						                echo "<td>" . $row['height'] . " / " . $row['weight'] . "</td>";
 						                echo "<td>" . $row['joining'] . " / " . $row1['sub_type_name'] . "</td>";
 						                
 						                $sno++;
 						                
-						                echo "<td><form action='new_member_table.php' method='post'><input type='hidden' name='name' value='" . $msgid . "'/><input type='hidden' name='full_name' value='" . $msgid1 . "'/><input type='submit' value='New Schedule' class='btn btn-info'/></form><form action='view_member_table.php' method='post'><input type='hidden' name='name' value='" . $msgid . "'/><input type='hidden' name='full_name' value='" . $msgid1 . "'/><input type='submit' value='View Schedule' class='btn btn-warning'/></form></td></tr>";
+						                echo "<td><form action='new_member_table.php' method='post'><input type='hidden' name='name' value='" . $msgid . "'/><input type='hidden' name='full_name' value='" . $msgid1 . "'/><input type='submit' value='Nuevo horario' class='btn btn-info'/></form><form action='view_member_table.php' method='post'><input type='hidden' name='name' value='" . $msgid . "'/><input type='hidden' name='full_name' value='" . $msgid1 . "'/><input type='submit' value='Ver horario' class='btn btn-warning'/></form></td></tr>";
 						                $msgid = 0;
 						            }
 						        }

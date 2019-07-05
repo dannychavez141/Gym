@@ -10,7 +10,7 @@ page_protect();
 <html lang="en">
 <head>
 
-    <title>Gym</title>
+    <title>RAPAZZ Gym</title>
     <link rel="stylesheet" href="../../neon/js/jquery-ui/css/no-theme/jquery-ui-1.10.3.custom.min.css"  id="style-resource-1">
     <link rel="stylesheet" href="../../neon/css/font-icons/entypo/css/entypo.css"  id="style-resource-2">
     <link rel="stylesheet" href="../../neon/css/font-icons/entypo/css/animation.css"  id="style-resource-3">
@@ -161,7 +161,7 @@ page_protect();
 					
 				</div>
 
-		<h3>Platea21's Gym</h3>
+		<h3>RAPAZZ Gym</h3>
 
 			Detalles de: - <?php
 			$id     = $_POST['name'];
@@ -185,7 +185,7 @@ page_protect();
 					<th>Imagen</th>
 					<th>ID Membresia</th>
 					<th>Nombre</th>
-					<th>Edad / Sexo</th>
+					<th>Sexo</th>
 					<th>Inscripcion</th>
 				</tr>
 			</thead>
@@ -201,7 +201,7 @@ page_protect();
 					        echo "<tr><td><img src='" . $row['pic_add'] . "'></td>";
 					        echo "<td>" . $row['newid'] . "</td>";
 					        echo "<td>" . $row['name'] . "</td>";
-					        echo "<td>" . $row['age'] . " / " . $row['sex'] . "</td>";
+					        echo "<td>" . $row['sex'] . "</td>";
 					        echo "<td>" . $row['joining'] . "</td></tr>";
 					    }
 
@@ -256,7 +256,7 @@ page_protect();
 						        
 						        $sno++;
 						        
-						        echo "<td><form action='gen_invoice.php' method='post'><input type='hidden' name='name' value='" . $msgid . "'/><input type='submit' value='Print Invoice ' class='btn btn-info'/></form><form action='edit_invoice.php' method='post'><input type='hidden' name='name' value='" . $msgid . "'/><input type='submit' value='Edit Invoice ' class='btn btn-warning'/></form><form action='del_invoice.php' method='post' onSubmit='return ConfirmDelete();'><input type='hidden' name='name' value='" . $msgid . "'/><input type='submit' value='Delete Invoice ' class='btn btn-danger'/></form></td></tr>";
+						        echo "<td><form action='gen_invoice.php' method='post'><input type='hidden' name='name' value='" . $msgid . "'/><input type='submit' value='Imprimir Recibo' class='btn btn-info'/></form><form action='edit_invoice.php' method='post'><input type='hidden' name='name' value='" . $msgid . "'/><input type='submit' value='Editar Recibo ' class='btn btn-warning'/></form><form action='del_invoice.php' method='post' onSubmit='return ConfirmDelete();'><input type='hidden' name='name' value='" . $msgid . "'/><input type='submit' value='Eliminar Recibo' class='btn btn-danger'/></form></td></tr>";
 						        $msgid = 0;
 						    }
 						    
