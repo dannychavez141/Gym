@@ -4,7 +4,7 @@
                 
 	<li><a href="new_entry.php"><i class="entypo-user-add"></i><span>Nuevo Registro</span></a>                
 				
-	<li><a href="payments.php"><i class="entypo-star"></i><span>Pagos</span></a></li>
+	<li><a href="payments.php"><i class="entypo-star"></i><span>Suscripciones</span></a></li>
 
 	<li><a href="category.php"><i class="entypo-users"></i><span>Miembros</span></a>
 		<ul>

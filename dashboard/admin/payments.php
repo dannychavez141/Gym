@@ -150,10 +150,10 @@ page_protect();
 					<th>Expiracion Membresia</th>
 					<th>Nombre / ID Miembro</th>
 					<th>Direccion / Contacto</th>
-					<th>Prueba</th>
+					<th>Documento de identidad</th>
 					<th>Correo Electronico/ Edad / Sexo</th>
 					<th>Altura / Peso</th>
-					<th>Altura / Peso</th>
+					<th>Fecha/Tipo</th>
 					<th>Accion</th>
 				</tr>
 			</thead>
@@ -180,16 +180,16 @@ page_protect();
 					                echo "<tr><td>" . $row1['expiry'] . "</td>";
 					                $expiry        = $row1['expiry'];
 					                $sub_type_name = $row1['sub_type_name'];
-					                echo "<td>" . $row['name'] . " / " . $row['newid'] . "<img src='" . $row['pic_add'] . "'></td>";
-					                echo "<td>" . $row['address'] . " / " . $row['contact'] . "</td>";
-					                echo "<td>" . $row['proof'] . " / " . $row['other_proof'] . "</td>";
-					                echo "<td>" . $row['email'] . " / " . $row['age'] . " / " . $row['sex'] . "</td>";
-					                echo "<td>" . $row['height'] . " / " . $row['weight'] . "</td>";
+					                echo "<td>" . $row['name'] . " / " . $row['newid'] . "<img src='" . $row['pic_add'] . "' width='100' height='100' ></td>";
+					                echo "<td>" . $row['address'] . " / " . $row['contactperson'] . "</td>";
+					                echo "<td>" . $row['proof'] . " / " . $row['nproof'] . "</td>";
+					                echo "<td>" . $row['email'] . " / " . $row['sex'] . "</td>";
+					                echo "<td>" . $row['height'] . "cm / " . $row['weight'] . "kg</td>";
 					                echo "<td>" . $row['joining'] . " / " . $row1['sub_type_name'] . "</td>";
 					                
 					                $sno++;
 					                
-					                echo "<td><form action='make_payments.php' method='post'><input type='hidden' name='name' value='" . $msgid . "'/><input type='submit' value='Add Payment ' class='btn btn-info'/></form></td></tr>";
+					                echo "<td><form action='make_payments.php' method='post'><input type='hidden' name='name' value='" . $msgid . "'/><input type='submit' value='Agregar Suscripcion' class='btn btn-info'/></form></td></tr>";
 					                $msgid = 0;
 					            }
 					        }

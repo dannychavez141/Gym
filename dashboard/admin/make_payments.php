@@ -153,7 +153,7 @@ if (isset($_POST['name'])) {
 					
 				</div>
 
-		<h3>Platea21's Gym</h3>
+		<h3>RAPAZZ Gym</h3>
 
 		<hr />
 
@@ -174,7 +174,7 @@ if (isset($_POST['name'])) {
 			</div>
 
 			<div class="form-group">
-				<label for="field-1" class="col-sm-3 control-label">PhoA :</label>					
+				<label for="field-1" class="col-sm-3 control-label">Fotografia :</label>					
 					<div class="col-sm-5">
 						<img src='<?php echo $pic; ?>'>
 					</div>

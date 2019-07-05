@@ -226,38 +226,30 @@ page_protect();
 			<div class="form-group">
 				<label for="field-1" class="col-sm-3 control-label">Nombre :</label>					
 					<div class="col-sm-5">
-						<input type="text" name="p_name" id="textfield3" class="form-control" data-rule-required="true" data-rule-minlength="4" placeholder="Nombre de miembro" maxlength="30">
+						<input type="text" name="p_name" id="textfield3" class="form-control" data-rule-required="true" data-rule-minlength="4" placeholder="Nombres y Apellidos de miembro" maxlength="30" required="">
 					</div>
 			</div>
 
 			<div class="form-group">
 				<label for="field-1" class="col-sm-3 control-label">Direccion :</label>					
 					<div class="col-sm-5">
-						<input type="text" name="add" id="textfield5" class="form-control" data-rule-required="true" data-rule-minlength="6" placeholder="Direccion">
+						<input type="text" name="add" id="textfield5" class="form-control" data-rule-required="true" data-rule-minlength="6" placeholder="Direccion"required="">
 					</div>
 			</div>
 										
 			<div class="form-group">
 				<label for="field-1" class="col-sm-3 control-label">Fecha de Nacimiento :</label>			
 					<div class="col-sm-5">
-						<input type="text" name="birthdate" id="birthdate" class="form-control datepicker" data-format="yyyy-m-d">
+						<input type="text" placeholder="seleccione Fecha de Nacimiento" name="birthdate" id="birthdate" class="form-control datepicker" data-format="yyyy-m-d"required="">
 					</div>
 			</div>
-
-			<div class="form-group">
-				<label for="field-1" class="col-sm-3 control-label">Edad :</label>					
-					<div class="col-sm-5">
-						<input type="text" name="age" id="textfield4" class="form-control" data-rule-required="true" data-rule-minlength="1" placeholder="Age" onKeyPress="return checkIt(event)" maxlength="3">
-					</div>
-			</div>						
 
 			<div class="form-group">
 				<label for="field-1" class="col-sm-3 control-label">Sexo :</label>					
 					<div class="col-sm-5">
 						<select name="sex" id="bbb" data-rule-required="true" class="form-control">
-						    <option value="">-- Porfavor seleccione --</option>
-						    <option value="Male">Masculino</option>
-						    <option value="Female">Femenino</option>
+						  <option value="Masculino">Masculino</option>
+						    <option value="Femenino">Femenino</option>
 						</select>
 					</div>
 			</div>
@@ -265,93 +257,56 @@ page_protect();
 			<div class="form-group">
 				<label for="field-1" class="col-sm-3 control-label">Altura :</label>					
 					<div class="col-sm-5">
-						<input type="text" name="height" id="textfield" class="form-control" data-rule-required="true" data-rule-minlength="1" placeholder="Height"  maxlength="10"> (In  FEET)
+						<input type="number" name="height" id="textfield" class="form-control" data-rule-required="true" data-rule-minlength="1" placeholder="Altura"  min="0" max="500"required=""> (En Cms)
 					</div>
 			</div>		
 
 			<div class="form-group">
 				<label for="field-1" class="col-sm-3 control-label">Peso :</label>					
 					<div class="col-sm-5">
-						<input type="text" name="weight" id="textfield" class="form-control" data-rule-required="true" data-rule-minlength="1" placeholder="Weight"  maxlength="10"> (In Kgs)
-					</div>
-			</div>			
-
-			<div class="form-group">
-				<label for="field-1" class="col-sm-3 control-label">Nacionalidad :</label>					
-					<div class="col-sm-5">
-						<input type="text" name="nationality" id="nationality" class="form-control" data-rule-required="true" data-rule-minlength="6" placeholder="Nationality">
-					</div>
-			</div>
-
-			<div class="form-group">
-				<label for="field-1" class="col-sm-3 control-label">Contacto :</label>					
-					<div class="col-sm-5">
-						<input type="text" name="contact" id="textfield6" class="form-control" data-rule-required="true" data-rule-minlength="12" placeholder="Mobile / Phone" onKeyPress="return checkIt(event)" maxlength="12">
+						<input type="number" name="weight" id="textfield" class="form-control" data-rule-required="true" data-rule-minlength="1" placeholder="Peso"  min="0" max="500"required=""> (En Kgs)
 					</div>
 			</div>			
 
 			<div class="form-group">
 				<label for="field-1" class="col-sm-3 control-label">Correo Electronico:</label>					
 					<div class="col-sm-5">
-						<input type="text" name="email"  id="emailfield" class="form-control" data-rule-minlength="5" placeholder="E-Mail" maxlength="60">
+						<input type="text" name="email"  id="emailfield" class="form-control" data-rule-minlength="5" placeholder="E-Mail" maxlength="60"required="">
 					</div>
 			</div>
-
-			<div class="form-group">
-				<label for="field-1" class="col-sm-3 control-label">Facebook Account:</label>					
-					<div class="col-sm-5">
-						<input type="text" name="facebookaccount"  id="facebookaccount" class="form-control" data-rule-minlength="5" placeholder="Facebook Account" maxlength="60">
-					</div>
-			</div>
-
-			<div class="form-group">
-				<label for="field-1" class="col-sm-3 control-label">Cuenta Twitter:</label>					
-					<div class="col-sm-5">
-						<input type="text" name="twitteraccount"  id="twitteraccount" class="form-control" data-rule-minlength="5" placeholder="Twitter Account" maxlength="60">
-					</div>
-			</div>
-
+	
 			<div class="form-group">
 				<label for="field-1" class="col-sm-3 control-label">Telefono / Celular:</label>					
 					<div class="col-sm-5">
-						<input type="text" name="contactperson"  id="contactperson" class="form-control" data-rule-minlength="5" placeholder="Contact Person" maxlength="60">
+						<input type="text" name="contactperson"  id="contactperson" class="form-control" data-rule-minlength="5" placeholder="Telefono / Celular" maxlength="60"required="">
 					</div>
 			</div>
-
-			<div class="form-group">
-				<label for="field-1" class="col-sm-3 control-label">Gym Anterior:</label>					
-					<div class="col-sm-5">
-						<input type="text" name="previousgym"  id="previousgym" class="form-control" data-rule-minlength="5" placeholder="Previous Gym" maxlength="60">
-					</div>
-			</div>
-
-			<div class="form-group">
-				<label for="field-1" class="col-sm-3 control-label">Años Entrenando:</label>					
-					<div class="col-sm-5">
-						<input type="text" name="yearstraining"  id="yearstraining" class="form-control" data-rule-minlength="5" placeholder="Years Training" maxlength="60">
-					</div>
-			</div>																						
-
+																						
 			<div class="form-group">
 				<label for="field-1" class="col-sm-3 control-label">Identificacion:</label>					
 					<div class="col-sm-5">
 						<select name="proof" id="bbb" data-rule-required="true" class="form-control">
-							    <option value="">-- Porfavor seleccione --</option>
-							    <option value="GSIS Card">DNI</option>
-							    <option value="Voter Card">Tarjeta de Votacion</option>
+							    <option value="DNI">DNI</option>
+							    <option value="Tarjeta de Votacion">Tarjeta de Votacion</option>
 								<option value="Licencia de Conducir">Licencia de Conducir</option>
-								<option value="Passport">Pasaporte</option>
-								<option value="College/School ID">Universidad /Escuela ID</option>
-								<option value="Others">Otros</option>
+								<option value="Pasaporte">Pasaporte</option>
+								<option value="Universidad /Escuela ID">Universidad /Escuela ID</option>
+								<option value="Otros">Otros</option>
 						</select>
 						
+					</div>
+			</div>
+			<div class="form-group">
+				<label for="field-1" class="col-sm-3 control-label">N° de Identificacion:</label>					
+					<div class="col-sm-5">
+						<input type="text" name="nproof"  id="nproof" class="form-control" placeholder="N° de Identificacion" maxlength="15"required="">
 					</div>
 			</div>
 
 			<div class="form-group">
 				<label for="field-1" class="col-sm-3 control-label">InscripcionFecha :</label>					
 					<div class="col-sm-5">
-						<input type="text" name="date" id="textfield22" value="<?php echo date('Y-m-d'); ?>">
+						<input type="text" name="date" id="textfield22" value="<?php echo date('Y-m-d'); ?>"required="">
 					</div>
 			</div>			
 
@@ -377,7 +332,7 @@ page_protect();
 							?>
 						</select>
 
-						<span class="selectRequiredMsg">Porfavor seleccione un articulo</span>
+						<span class="selectRequiredMsg">Porfavor seleccione un tipo de menbresia</span>
 					</div>					
 			</div>
 
@@ -391,7 +346,7 @@ page_protect();
 
 			<div class="form-group">		
 					<div class="col-sm-offset-3 col-sm-5">
-						<button type="submit" class="btn btn-primary">Guardar Cambios</button>	
+						<button type="submit" class="btn btn-primary">Registrar Miembro</button>	
 					</div>
 			</div>				
 									

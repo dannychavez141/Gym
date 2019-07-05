@@ -11,10 +11,10 @@ if (mysqli_affected_rows($con) == 1) {
 } else {
     mysqli_query($con, "DELETE FROM user_data WHERE wait='yes'");
     
-    echo "<head><script>alert('Profile NOT Added, Check Again');</script></head></html>";
-    echo "<meta http-equiv='refresh' content='0; url=new_entry.php'>";
+    echo "<head><script>alert('Cliente no Agregado, Verifique los datos');</script></head></html>";
+  echo "<meta http-equiv='refresh' content='0; url=new_entry.php'>";
 }
-if (isset($_POST['p_name']) && isset($_POST['mem_type']) && isset($_POST['total']) && isset($_POST['age']) && isset($_POST['paid'])) {
+
     function getRandomWord($len = 3)
     {
         $word = array_merge(range('a', 'z'), range('0', '9'));
@@ -47,24 +47,17 @@ if (isset($_POST['p_name']) && isset($_POST['mem_type']) && isset($_POST['total'
     }
     $invoice   = substr(time(), 2, 10) . getRandomWord();
     $date      = $_POST['date'];
-    $age       = rtrim($_POST['age']);
     $full_name = rtrim($_POST['p_name']);
     $email     = rtrim($_POST['email']);
     $address   = rtrim($_POST['add']);
-    $zipcode   = rtrim($_POST['zipcode']);    
     $birthdate   = $_POST['birthdate'];
-    $contact   = rtrim($_POST['contact']);
     $sex       = rtrim($_POST['sex']);
     $height    = rtrim($_POST['height']);
     $weight    = rtrim($_POST['weight']);
-    $nationality    = rtrim($_POST['nationality']);
-    $facebookaccount    = rtrim($_POST['facebookaccount']);
-    $twitteraccount    = rtrim($_POST['twitteraccount']);
     $contactperson    = rtrim($_POST['contactperson']);
-    $previousgym    = rtrim($_POST['previousgym']);
-    $yearstraining    = rtrim($_POST['yearstraining']);
     $total     = $_POST['total'];
     $paid      = $_POST['paid'];
+    $nproof      = $_POST['nproof'];
     $mod_date  = strtotime($date . "+ $days days");
     $expiry    = date("Y-m-d", $mod_date);
     $wait      = "no";
@@ -76,29 +69,25 @@ if (isset($_POST['p_name']) && isset($_POST['mem_type']) && isset($_POST['total'
     
     //echo $query;
     $result = mysqli_query($con, $query);
-    
+    $sql="";
     if (mysqli_affected_rows($con) == 1) {
         while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
             
             $p_id = $row['newid'];
-            
-             mysqli_query($con, "UPDATE user_data SET name='$full_name', address='$address', zipcode='$zipcode', birthdate='$birthdate', contact='$contact', email='$email', height='$height', weight='$weight', nationality='$nationality', facebookaccount='$facebookaccount', twitteraccount='$twitteraccount', contactperson='$contactperson', previousgym='$previousgym', yearstraining='$yearstraining', joining='$date', age='$age', proof='$proof', other_proof='$other_proof', sex='$sex' WHERE wait='yes'");
+            $sql="UPDATE user_data SET name='$full_name', address='$address', birthdate='$birthdate',email='$email', height='$height', weight='$weight',contactperson='$contactperson', joining='$date', proof='$proof', other_proof='$other_proof', sex='$sex', nproof='$nproof' WHERE wait='yes'";
+             mysqli_query($con,$sql);
+            // echo $sql."<br>";
             $bal = $total - $paid;
-            
-            mysqli_query($con, "INSERT INTO subsciption (mem_id,name,sub_type,paid_date,total,paid,expiry,invoice,sub_type_name,bal,exp_time,renewal)
-VALUES ('$p_id','$full_name','$mem_type','$date','$total','$paid','$expiry','$invoice','$name_type','$bal','$exp_time','yes')");
-            echo "<head><script>alert('Member Added ,');</script></head></html>";
+            $sql="INSERT INTO subsciption (mem_id,name,sub_type,paid_date,total,paid,expiry,invoice,sub_type_name,bal,exp_time,renewal)
+VALUES ('$p_id','$full_name','$mem_type','$date','$total','$paid','$expiry','$invoice','$name_type','$bal','$exp_time','yes')";
+            mysqli_query($con,$sql);
+           // echo $sql;
+            echo "<head><script>alert('Cliente Agregado');</script></head></html>";
             
             mysqli_query($con, "UPDATE user_data SET wait='no' WHERE wait='yes'");
         }
-    }
-    
-    
-} else {
-    echo "<head><script>alert('Profile NOT Added, Check Again');</script></head></html>";
-    echo "<meta http-equiv='refresh' content='0; url=new_entry.php'>";
-    
-}
+    }  
+
 ?>
 <!doctype html>
 
@@ -183,7 +172,7 @@ echo $invoice;
 		<header>
 			<a href="new_entry.php"><h1>Recibo (Nuevo Registro)</h1></a>
 			<address>
-				<p>Platea21's Gym</p>
+				<p>RAPAZZ Gym</p>
 				<p>3rd flr. JTL bldg. B. S. Tacna, Peru</p>
 				<p>Celular:+51 995-530-374</p><p>www.platea21.com (gorchor@gmail.com)</p><br><p><div id="barcodeTarget" class="barcodeTarget"></div>
     <canvas id="canvasTarget"></canvas> </span>
@@ -222,15 +211,15 @@ echo $full_name;
 ?></span></td>
 				</tr>
 				<tr>
-					<th><span  >Edad, Sexo</span></th>
+					<th><span  >Sexo</span></th>
 					<td><span  ><?php
-echo $age . " / " . $sex;
+echo $sex;
 ?></span></td>
 				</tr>
 				<tr>
 					<th><span  >Altura / Peso</span></th>
 					<td><?php
-echo $height . "  FEET / " . $weight . " Kg";
+echo $height . "  cm / " . $weight . " Kg";
 ?></span></td>
 				</tr>
 			</table>	
@@ -264,17 +253,17 @@ echo $expiry;
 			<table class="balance">
 				<tr>
 					<th><span  >Total</span></th>
-					<td><span data-prefix>$</span><span><?php
+					<td><span data-prefix>S/</span><span><?php
 echo $total;
 ?></span></td>
 				</tr><tr>
 					<th><span  >Pagado</span></th>
-					<td><span data-prefix>$</span><span><?php
+					<td><span data-prefix>S/</span><span><?php
 echo $paid;
 ?></span></td>
 				</tr><tr>
 					<th><span  >Deuda</span></th>
-					<td><span data-prefix>$</span><span><?php
+					<td><span data-prefix>S/</span><span><?php
 echo $total - $paid;
 ?></span></td>
 				</tr>
@@ -284,8 +273,8 @@ echo $total - $paid;
 		<aside>
 			<h1><span  >Notas Adicionales</span></h1>
 			<div  >
-				<p>1). Todos los miembros deben respetar nuestros TNC / normas normalmente de miembros podrán retirarse. </br> </br> 2). El pago no es transferible y no es reembolsable. </br> </br> 3). Comision en caso de presentarse dentro de los 5 días hábiles antes de la expiración sometidos , de lo contrario 100 PHP / día se le cobrará . </br> </br> 4). Todos los usuarios deben vestir apropiadamente O según aconseja. </br> </br> 5). Fumar NO está permitido en el sitio de la gimnasia . </br> </br> 6). Un PHP 1000 para romper / scracthing gafas que pertenecen a " gimnasio de Platea21 " se impondrá .
+				<p>1). Todos los miembros deben respetar nuestros TNC / normas normalmente de miembros podrán retirarse. </br> </br> 2). El pago no es transferible y no es reembolsable. </br> </br> 3). Comision en caso de presentarse dentro de los 5 días hábiles antes de la expiración sometidos , de lo contrario 100 PHP / día se le cobrará . </br> </br> 4). Todos los usuarios deben vestir apropiadamente O según aconseja. </br> </br> 5). Fumar NO está permitido en el sitio de la gimnasia . </br> </br> 6). Un PHP 1000 para romper / scracthing gafas que pertenecen a "RAPAZZ Gym" se impondrá .
 			</div>
-		</aside><center><br><br><a href="view_mem.php">Platea21's Gym ( www.platea21.com )</center>
+		</aside><center><br><br><a href="view_mem.php">RAPAZZ Gym</center>
 	</body>
 </html>
