@@ -171,10 +171,10 @@ echo $invoice;
 	<body>
 		<header>
 			<a href="new_entry.php"><h1>Recibo (Nuevo Registro)</h1></a>
-			<address>
-				<p>RAPAZZ Gym</p>
-				<p>3rd flr. JTL bldg. B. S. Tacna, Peru</p>
-				<p>Celular:+51 995-530-374</p><p>www.platea21.com (gorchor@gmail.com)</p><br><p><div id="barcodeTarget" class="barcodeTarget"></div>
+			address>
+        <p>RAPAZZ Gym</p>
+        <p>Psje. San Francisco Mz. 183 Lte. 21 Yarinacocha, Peru</p>
+        <p>Celular:+51 995 530 374</p><br><p><div id="barcodeTarget" class="barcodeTarget"></div>
     <canvas id="canvasTarget"></canvas> </span>
 			</address>
 			<span><img alt="" src="../../img/logo.png">
