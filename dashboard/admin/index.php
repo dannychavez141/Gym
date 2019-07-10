@@ -141,7 +141,7 @@ page_protect();
 						<h2>Inscritos este Mes</h2><br>	
 							<?php
 							$date  = date('Y-m');
-							$query = "select COUNT(*) from user_data WHERE wait='no'";
+							$query = "select COUNT(*) from user_data WHERE joining like '%$date%'";
 
 							//echo $query;
 							$result = mysqli_query($con, $query);

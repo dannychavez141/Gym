@@ -1,4 +1,4 @@
-﻿
+
 <?php
 require 'db_conn.php';
 page_protect();
@@ -130,16 +130,14 @@ if (isset($_POST['from'])) {
 
 		<?php
 		    $from = $_POST['from'];
-		    $to   = $_POST['to'];
+		   
 		?>	
 
 		Miembros de :
 
 		<?php
 		    echo $from;
-		?>   A : <?php
-		    echo $to;
-		?>
+		?>  
 
 		<table class="table table-bordered datatable" id="table-1">
 				<thead>
@@ -153,7 +151,7 @@ if (isset($_POST['from'])) {
 				</thead>
 				<tbody>
 				<?php   
-				    $query  = "select * from user_data WHERE joining BETWEEN '$from' AND '$to'";
+				    $query  = "select * from user_data WHERE joining like '%$from%'";
 				    //echo $query;
 				    $result = mysqli_query($con, $query);
 				    $sno    = 1;
@@ -184,14 +182,12 @@ if (isset($_POST['from'])) {
 
 			<?php
 				    $from = $_POST['from'];
-				    $to   = $_POST['to'];
+				
 			?>
 
 			Pagos de Miembros de:<?php
 				    echo $from;
-				?>   A : <?php
-				    echo $to;
-			?>
+				?>  
 
 			<table class="table table-bordered datatable" id="table-1">
 				<thead>
@@ -209,7 +205,7 @@ if (isset($_POST['from'])) {
 					<?php
 					    
 					    
-					    $query  = "select * from subsciption WHERE paid_date BETWEEN '$from' AND '$to'";
+					    $query  = "select * from subsciption WHERE paid_date  like '%$from%'";
 					    //echo $query;
 					    $result = mysqli_query($con, $query);
 					    $sno    = 1;
@@ -282,5 +278,3 @@ var spryselect2 = new Spry.Widget.ValidationSelect("spryselect2");
 }
 
 ?>
-
-

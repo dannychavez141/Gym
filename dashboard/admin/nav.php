@@ -43,10 +43,7 @@
 			<li>
 				<a href="over_members_year.php"><span>Miembros por Año</span></a>
 			</li>
-
-			<li>
-				<a href="revenue_month.php"><span>Ingresos por mes</span></a>
-			</li>			
+		
 
 		</ul>
 

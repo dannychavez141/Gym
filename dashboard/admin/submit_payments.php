@@ -150,11 +150,11 @@ echo $invoice;
 	</head>
 	<body>
 		<header>
-			<a href="payments.php"><h1>Invoice (Payments)</h1></a>
+			<a href="payments.php"><h1>Factura (Pagos)</h1></a>
       <address>
         <p>RAPAZZ Gym</p>
         <p>Psje. San Francisco Mz. 183 Lte. 21 Yarinacocha, Peru</p>
-        <p>Celular:+51995530374</p><br><p><div id="barcodeTarget" class="barcodeTarget"></div>
+        <p>Celular:+51 995 530 374</p><br><p><div id="barcodeTarget" class="barcodeTarget"></div>
     <canvas id="canvasTarget"></canvas> </span>
       </address>
       <span><img alt="" src="../../img/logo.png" width="350" height="100">

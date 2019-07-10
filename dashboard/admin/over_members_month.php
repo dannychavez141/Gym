@@ -148,20 +148,20 @@ page_protect();
 			<div class="form-group">
 				<label for="field-1" class="col-sm-3 control-label">De :</label>					
 					<div class="col-sm-5">
-						<input type="text" name="from" id="textfield22" class="form-control datepicker">
+						<input type="date" name="from" id="textfield22" value="<?php echo date('Y-m-d'); ?>">
 					</div>
 			</div>
 
 			<div class="form-group">
 				<label for="field-1" class="col-sm-3 control-label">A :</label>					
 					<div class="col-sm-5">
-						 <input type="text" name="to" id="textfield22" class="form-control datepicker">
+						 <input type="date" name="to" id="textfield22" value="<?php echo date('Y-m-d'); ?>">
 					</div>
 			</div>
 
 			<div class="form-group">		
 					<div class="col-sm-offset-3 col-sm-5">
-						<button type="submit" class="btn btn-primary">Guardar Cambios</button>	
+						<button type="submit" class="btn btn-primary">Generar reporte</button>	
 					</div>
 			</div>				
 

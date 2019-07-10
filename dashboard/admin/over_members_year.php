@@ -143,25 +143,18 @@ page_protect();
 
 		<hr />
 
-			<form action="over_month.php" method="POST" class='form-horizontal form-bordered'>
+			<form action="over_year.php" method="POST" class='form-horizontal form-bordered'>
 
 				<div class="form-group">
-					<label for="field-1" class="col-sm-3 control-label">De :</label>					
+					<label for="field-1" class="col-sm-3 control-label">Seleccione año :</label>					
 						<div class="col-sm-5">
-							<input type="text" name="from" id="textfield22"  class="form-control datepicker" value="<?php echo date('Y-m-d'); ?>">
+							<input type="number" name="from" id="textfield22" min="2000"  max="<?php echo date('Y'); ?>" value="<?php echo date('Y'); ?>">
 						</div>
 				</div>
 
-
-				<div class="form-group">
-					<label for="field-1" class="col-sm-3 control-label">A :</label>					
-						<div class="col-sm-5">
-							 <input type="text" name="to" id="textfield22" class="form-control datepicker" value="<?php echo date('Y-m-d'); ?>">
-						</div>
-				</div>
 	 
 				<div class="form-actions">
-						<button type="submit" class="btn btn-primary">Guardar Cambios</button>
+						<button type="submit" class="btn btn-primary">Generar Reporte</button>
 				</div>
 			
 			</form>
